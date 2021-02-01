@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         mogesalmebit = findViewById(R.id.mogesalmebit)
         registerButton = findViewById(R.id.registerButton)
 
-
-
         signInButton.setOnClickListener{
 
             startActivity(Intent(this, LoginActivity::class.java))

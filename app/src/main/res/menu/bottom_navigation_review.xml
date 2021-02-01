@@ -2,17 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <item
         android:id="@+id/navigation_person"
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="Person"
-        app:cnb_iconColor="@color/red" />
+        android:title="Person" />
 
     <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_baseline_message_24"
-        android:title="Chat"
-        app:cnb_iconColor="#F23B5F" />
+        android:title="Chat"/>
 
 </menu>

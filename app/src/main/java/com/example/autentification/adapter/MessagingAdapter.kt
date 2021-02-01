@@ -10,6 +10,7 @@ import com.example.autentification.R
 import com.example.autentification.data.MessageDt
 import com.example.autentification.utils.Constants.RECEIVE_ID
 import com.example.autentification.utils.Constants.SEND_ID
+import kotlinx.android.synthetic.main.message_item.view.*
 
 class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {
 
@@ -27,8 +28,7 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessageViewHolder {
         return MessageViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.message_item, parent, false)
-        )
+            LayoutInflater.from(parent.context).inflate(R.layout.message_item, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -41,7 +41,10 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
 
         when (currentMessage.id) {
             SEND_ID -> {
-                holder.itemView.
+                holder.itemView.tv_message.apply {
+                    text = currentMessage.message
+                    visibility = View.VISIBLE
+                }
                 holder.itemView.tv_bot_message.visibility = View.GONE
             }
             RECEIVE_ID -> {
@@ -54,7 +57,7 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
         }
     }
 
-    fun insertMessage(message: Message) {
+    fun insertMessage(message: MessageDt) {
         this.messagesList.add(message)
         notifyItemInserted(messagesList.size)
     }
