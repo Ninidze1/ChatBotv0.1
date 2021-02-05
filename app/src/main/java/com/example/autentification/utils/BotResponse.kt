@@ -15,40 +15,39 @@ object BotResponse {
 
         return when {
 
-            message.contains("ააგდე") && message.contains("მონეტა") -> {
+            message.contains("aagde") && message.contains("moneta") -> {
                 val r = (0..1).random()
-                val result = if (r == 0) "საფასური" else "ბორჯღალო"
+                val result = if (r == 0) "საფასური " else "ბორჯღალო"
 
                 "ავაგდე მონეტა და ამოვიდა $result"
             }
 
-            message.contains("გამოთვალე") -> {
-                val equation: String? = message.substringAfterLast("გამოთვალე")
+            message.contains("gamotvale") -> {
+                val equation: String? = message.substringAfterLast("gamotvale")
                 return try {
                     val answer = SolveMath.solveMath(equation ?: "0")
                     "$answer"
 
                 } catch (e: Exception) {
-                    "ბოდიშით, მაგდენს ვერ ვქაჩავ."
+                    "მაგდენს ვერ ვქაჩავ."
                 }
             }
 
-            message.contains("გამარჯობა") -> {
+            message.contains("gamarjoba") -> {
                 when (random) {
-                    0 -> "გაუმარჯოს!"
-                    1 -> "ზდ"
-                    2 -> "ბარო!"
-                    else -> "შეცდომა!" }
+                    0 -> "გაუმარჯოს"
+                    1 -> "ზდ ბრატ!"
+                    else -> "error!" }
             }
 
-            message.contains("რატომ") -> {
+            message.contains("ratom") -> {
                 when (random) {
                     0 -> "იმიტომ :)"
-                    else -> "შეცდომა!"
+                    else -> "error!"
                 }
             }
 
-            message.contains("როგორ ხარ") -> {
+            message.contains("rogor xar") -> {
                 when (random) {
                     0 -> "კარგად ვარ, მადლობა"
                     1 -> "რავი, შაურმას შევჭამდი"
@@ -75,10 +74,8 @@ object BotResponse {
 
             else -> {
                 when (random) {
-                    0 -> "ვერ გავიგე რისი თქმა გინდათ"
-                    1 -> "მაგაზე პასუხს არ გაგცემ"
-                    2 -> "რავიცი აბა"
-                    else -> "შეცდომა"
+                    0 -> "მაგაზე პასუხს არ გაგცემ!"
+                    else -> "error"
                 }
             }
         }

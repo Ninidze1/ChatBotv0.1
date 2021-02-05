@@ -26,6 +26,7 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
     private lateinit var NameInput: EditText
     private lateinit var UrlInput: EditText
     private lateinit var saveButton: Button
+    private lateinit var progressBar2: ProgressBar
     private lateinit var mAuth: FirebaseAuth
     private lateinit var db: DatabaseReference
 
@@ -45,13 +46,13 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
         userName2 = view.findViewById(R.id.userName2)
         UrlInput = view.findViewById(R.id.UrlInput)
         saveButton = view.findViewById(R.id.saveButton)
+        progressBar2 = view.findViewById(R.id.progressBar2)
         navController = Navigation.findNavController(view)
 
         resetFromPerson.setOnClickListener {
             requireActivity().run {
 
                 startActivity(Intent(this, ResetActivity::class.java))
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
             }
 
@@ -63,7 +64,6 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
             requireActivity().run {
 
                 startActivity(Intent(this, MainActivity::class.java))
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
             }
 
@@ -123,7 +123,10 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
                             .placeholder(R.drawable.ic_launcher_foreground)
                             .into(imageView2)
 
+
                     }
+
+                    progressBar2.visibility = View.GONE
 
                 }
 
