@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight=".5"
+            android:textColor="@color/black"
             android:background="@drawable/roundbutton"
             android:backgroundTint="@android:color/white"
             android:hint="Type a message..."

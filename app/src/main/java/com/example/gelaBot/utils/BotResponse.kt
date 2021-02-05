@@ -22,7 +22,7 @@ object BotResponse {
                 "ავაგდე მონეტა და ამოვიდა $result"
             }
 
-            message.contains("gamotvale") -> {
+            message.contains("gamotvale") || message.contains("ramdenia") -> {
                 val equation: String? = message.substringAfterLast("gamotvale")
                 return try {
                     val answer = SolveMath.solveMath(equation ?: "0")
@@ -37,13 +37,13 @@ object BotResponse {
                 when (random) {
                     0 -> "გაუმარჯოს"
                     1 -> "ზდ ბრატ!"
-                    else -> "error!" }
+                    else -> "მაგდენს ვერ ვქაჩავ!" }
             }
 
             message.contains("ratom") -> {
                 when (random) {
                     0 -> "იმიტომ :)"
-                    else -> "error!"
+                    else -> "მაგდენს ვერ ვქაჩავ!"
                 }
             }
 
@@ -52,11 +52,11 @@ object BotResponse {
                     0 -> "კარგად ვარ, მადლობა"
                     1 -> "რავი, შაურმას შევჭამდი"
                     2 -> "კარგად, თავად?"
-                    else -> "შეცდომა!"
+                    else -> "მაგდენს ვერ ვქაჩავ!"
                 }
             }
 
-            (message.contains("დრო") || message.contains("საათი")) -> {
+            (message.contains("saati") || message.contains("dro")) -> {
                 val timeStamp = Timestamp(System.currentTimeMillis())
                 val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm")
                 val date = sdf.format(Date(timeStamp.time))
@@ -64,18 +64,18 @@ object BotResponse {
                 date.toString()
             }
 
-            message.contains("გახსენი") && message.contains("გუგლი")-> {
+            message.contains("open") && message.contains("google")-> {
                 OPEN_GOOGLE
             }
 
-            message.contains("მოძებნე")-> {
+            message.contains("search")-> {
                 OPEN_SEARCH
             }
 
             else -> {
                 when (random) {
                     0 -> "მაგაზე პასუხს არ გაგცემ!"
-                    else -> "error"
+                    else -> "მაგდენს ვერ ვქაჩავ"
                 }
             }
         }

@@ -58,12 +58,12 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
 
         }
 
-
         backButtonFromChangeInfo.setOnClickListener {
 
             requireActivity().run {
 
                 startActivity(Intent(this, MainActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
             }
 
@@ -72,7 +72,6 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
         }
 
         saveButton.setOnClickListener {
-
 
             val name = NameInput.text.toString()
             val url = UrlInput.text.toString()

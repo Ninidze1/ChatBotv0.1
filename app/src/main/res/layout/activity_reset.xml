@@ -56,12 +56,12 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883" />
+        app:layout_constraintVertical_bias="0.338" />
 
     <Button
         android:id="@+id/resetButtonSubmit"
@@ -69,15 +69,16 @@
         android:layout_height="60dp"
         android:backgroundTint="@color/red"
         android:text="აღდგენა"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.703" />
 
     <ImageView
         android:id="@+id/backButtonFromReset"

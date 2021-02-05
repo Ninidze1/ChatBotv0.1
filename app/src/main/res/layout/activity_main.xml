@@ -15,6 +15,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="16dp"
         android:textSize="16sp"
+        android:textColor="@color/gray"
         android:text="არ ხარ ჩვენი წევრი ?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
