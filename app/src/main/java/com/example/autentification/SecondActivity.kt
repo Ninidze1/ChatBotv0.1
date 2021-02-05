@@ -38,12 +38,14 @@ class SecondActivity : AppCompatActivity() {
         backButtonFromReg.setOnClickListener {
 
             startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 
         resetButtonFromReg.setOnClickListener {
 
             startActivity(Intent(this, ResetFromMainActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 

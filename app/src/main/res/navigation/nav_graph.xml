@@ -21,6 +21,6 @@
         <argument
             android:name="nameofuser"
             app:argType="string"
-            android:defaultValue="unnamed warrior" />
+            android:defaultValue="ბრატ" />
     </fragment>
 </navigation>

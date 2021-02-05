@@ -31,6 +31,7 @@ class ResetActivity : AppCompatActivity() {
         backButtonFromReset.setOnClickListener {
 
             startActivity(Intent(this, LoginActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 
@@ -57,6 +58,7 @@ class ResetActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
 
                         startActivity(Intent(this, ChangeInfoActivity::class.java))
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                         finish()
 
                     } else {

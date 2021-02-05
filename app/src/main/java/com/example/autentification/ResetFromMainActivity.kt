@@ -49,6 +49,7 @@ class ResetFromMainActivity : AppCompatActivity() {
 
                         if (task.isSuccessful) {
                             startActivity(Intent(this, MainActivity::class.java))
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                             Toast.makeText(this, "აღდგენის ბმული გამოგზავნილია თქვენს ფოსტაზე", Toast.LENGTH_LONG).show()
 
                             finish()

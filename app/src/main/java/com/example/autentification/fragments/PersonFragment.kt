@@ -47,11 +47,12 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
         saveButton = view.findViewById(R.id.saveButton)
         navController = Navigation.findNavController(view)
 
-
         resetFromPerson.setOnClickListener {
             requireActivity().run {
 
                 startActivity(Intent(this, ResetActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+
             }
 
         }
@@ -62,6 +63,8 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
             requireActivity().run {
 
                 startActivity(Intent(this, MainActivity::class.java))
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+
             }
 
             mAuth.signOut()
@@ -73,6 +76,10 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
 
             val name = NameInput.text.toString()
             val url = UrlInput.text.toString()
+
+            val action = PersonFragmentDirections.actionPersonFragmentToChatFragment(name)
+
+            navController.navigate(action)
 
             val personInfo = PersonInfo(name, url)
 
@@ -94,6 +101,7 @@ class PersonFragment: Fragment(R.layout.fragment_person) {
                     }
 
             }
+
 
         }
 

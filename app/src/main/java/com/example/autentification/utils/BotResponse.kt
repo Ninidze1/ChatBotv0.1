@@ -15,7 +15,6 @@ object BotResponse {
 
         return when {
 
-            //Flips a coin
             message.contains("ააგდე") && message.contains("მონეტა") -> {
                 val r = (0..1).random()
                 val result = if (r == 0) "საფასური" else "ბორჯღალო"
@@ -23,7 +22,6 @@ object BotResponse {
                 "ავაგდე მონეტა და ამოვიდა $result"
             }
 
-            //Math calculations
             message.contains("გამოთვალე") -> {
                 val equation: String? = message.substringAfterLast("გამოთვალე")
                 return try {
@@ -35,7 +33,6 @@ object BotResponse {
                 }
             }
 
-            //Hello
             message.contains("გამარჯობა") -> {
                 when (random) {
                     0 -> "გაუმარჯოს!"
@@ -44,15 +41,14 @@ object BotResponse {
                     else -> "შეცდომა!" }
             }
 
-            //How are you?
-            message.contains("როგორ ხარ") -> {
+            message.contains("რატომ") -> {
                 when (random) {
                     0 -> "იმიტომ :)"
                     else -> "შეცდომა!"
                 }
             }
 
-            message.contains("რატომ") -> {
+            message.contains("როგორ ხარ") -> {
                 when (random) {
                     0 -> "კარგად ვარ, მადლობა"
                     1 -> "რავი, შაურმას შევჭამდი"
@@ -61,8 +57,7 @@ object BotResponse {
                 }
             }
 
-            //What time is it?
-            (message.contains("დრო") || message.contains("საათი")) && message.contains("?")-> {
+            (message.contains("დრო") || message.contains("საათი")) -> {
                 val timeStamp = Timestamp(System.currentTimeMillis())
                 val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm")
                 val date = sdf.format(Date(timeStamp.time))
@@ -70,17 +65,14 @@ object BotResponse {
                 date.toString()
             }
 
-            //Open Google
             message.contains("გახსენი") && message.contains("გუგლი")-> {
                 OPEN_GOOGLE
             }
 
-            //Search on the internet
             message.contains("მოძებნე")-> {
                 OPEN_SEARCH
             }
 
-            //When the programme doesn't understand...
             else -> {
                 when (random) {
                     0 -> "ვერ გავიგე რისი თქმა გინდათ"

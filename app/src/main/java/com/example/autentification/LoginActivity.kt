@@ -41,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         if (mAuth.currentUser != null) {
 
             startActivity(Intent(this, ChangeInfoActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
 
         }
@@ -48,18 +49,22 @@ class LoginActivity : AppCompatActivity() {
         backButtonFromLogin.setOnClickListener {
 
             startActivity(Intent(this, MainActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 
         registerButton.setOnClickListener {
 
-        startActivity(Intent(this, SecondActivity::class.java))
+            startActivity(Intent(this, SecondActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+
 
         }
 
         resetButton.setOnClickListener {
 
             startActivity(Intent(this, ResetFromMainActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 

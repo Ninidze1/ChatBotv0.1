@@ -23,16 +23,19 @@ import kotlinx.coroutines.*
 class ChatFragment: Fragment(R.layout.fragment_chat) {
 
     var messagesList = mutableListOf<MessageDt>()
+    private var username = ""
 
     private lateinit var adapter: MessagingAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        username = ChatFragmentArgs.fromBundle(requireArguments()).nameofuser
+
         recyclerView()
         clickEvents()
 
-            customBotMessage("გამარჯობა! გამოუშვით კითხვები")
+            customBotMessage("გამარჯობა ${username}! გამოუშვით კითხვები")
 
     }
 

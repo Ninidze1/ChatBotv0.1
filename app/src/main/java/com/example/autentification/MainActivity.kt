@@ -28,12 +28,14 @@ class MainActivity : AppCompatActivity() {
         signInButton.setOnClickListener{
 
             startActivity(Intent(this, LoginActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 
         registerButton.setOnClickListener {
 
             startActivity(Intent(this, SecondActivity::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
         }
 
