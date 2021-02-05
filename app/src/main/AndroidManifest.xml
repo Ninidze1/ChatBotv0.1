@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.autentification">
+    package="com.example.gelaBot">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,20 +10,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Autentification">
-        <activity android:name=".SplashActivity"
+        android:theme="@style/Theme.gelaBot">
+        <activity android:name="com.example.gelaBot.SplashActivity"
             android:theme="@style/Theme.ForSplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".ChangeInfoActivity" />
-        <activity android:name=".ResetFromMainActivity" />
-        <activity android:name=".ResetActivity" />
-        <activity android:name=".SecondActivity" />
-        <activity android:name=".MainActivity"
+        <activity android:name="com.example.gelaBot.LoginActivity" />
+        <activity android:name="com.example.gelaBot.ChangeInfoActivity" />
+        <activity android:name="com.example.gelaBot.ResetFromMainActivity" />
+        <activity android:name="com.example.gelaBot.ResetActivity" />
+        <activity android:name="com.example.gelaBot.SecondActivity" />
+        <activity android:name="com.example.gelaBot.MainActivity"
             android:theme="@style/Theme.ForMainActivity">
         </activity>
     </application>

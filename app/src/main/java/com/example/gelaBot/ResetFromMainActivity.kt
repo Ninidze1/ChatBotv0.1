@@ -1,4 +1,4 @@
-package com.example.autentification
+package com.example.gelaBot
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

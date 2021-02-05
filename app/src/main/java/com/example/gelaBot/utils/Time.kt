@@ -1,4 +1,4 @@
-package com.example.autentification.utils
+package com.example.gelaBot.utils
 
 import java.sql.Date
 import java.sql.Timestamp

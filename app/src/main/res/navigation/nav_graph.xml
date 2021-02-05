@@ -6,7 +6,7 @@
     app:startDestination="@id/navigation_person">
     <fragment
         android:id="@+id/navigation_person"
-        android:name="com.example.autentification.fragments.PersonFragment"
+        android:name="com.example.gelaBot.fragments.PersonFragment"
         android:label="fragment_person"
         tools:layout="@layout/fragment_person" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_chat"
-        android:name="com.example.autentification.fragments.ChatFragment"
+        android:name="com.example.gelaBot.fragments.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" >
         <argument

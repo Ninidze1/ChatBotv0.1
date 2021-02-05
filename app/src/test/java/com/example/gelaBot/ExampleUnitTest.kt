@@ -1,4 +1,4 @@
-package com.example.autentification
+package com.example.gelaBot
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.autentification
+package com.example.gelaBot
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

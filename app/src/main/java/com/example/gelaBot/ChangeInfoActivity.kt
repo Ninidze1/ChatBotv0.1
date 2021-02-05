@@ -1,7 +1,6 @@
-package com.example.autentification
+package com.example.gelaBot
 
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration

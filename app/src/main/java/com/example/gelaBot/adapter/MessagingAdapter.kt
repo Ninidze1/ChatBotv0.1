@@ -1,15 +1,14 @@
-package com.example.autentification.adapter
+package com.example.gelaBot.adapter
 
 import android.annotation.SuppressLint
-import android.os.Message
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.autentification.R
-import com.example.autentification.data.MessageDt
-import com.example.autentification.utils.Constants.RECEIVE_ID
-import com.example.autentification.utils.Constants.SEND_ID
+import com.example.gelaBot.R
+import com.example.gelaBot.data.MessageDt
+import com.example.gelaBot.utils.Constants.RECEIVE_ID
+import com.example.gelaBot.utils.Constants.SEND_ID
 import kotlinx.android.synthetic.main.message_item.view.*
 
 class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>() {

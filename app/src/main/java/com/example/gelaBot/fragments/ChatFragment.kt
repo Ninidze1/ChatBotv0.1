@@ -1,4 +1,4 @@
-package com.example.autentification.fragments
+package com.example.gelaBot.fragments
 
 import android.content.Intent
 import android.net.Uri
@@ -6,18 +6,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.autentification.PersonInfo
-import com.example.autentification.R
-import com.example.autentification.adapter.MessagingAdapter
-import com.example.autentification.data.MessageDt
-import com.example.autentification.utils.BotResponse
-import com.example.autentification.utils.Constants
-import com.example.autentification.utils.Time
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.example.gelaBot.R
+import com.example.gelaBot.adapter.MessagingAdapter
+import com.example.gelaBot.data.MessageDt
+import com.example.gelaBot.utils.BotResponse
+import com.example.gelaBot.utils.Constants
+import com.example.gelaBot.utils.Time
 import kotlinx.android.synthetic.main.fragment_chat.*
-import kotlinx.android.synthetic.main.fragment_person.*
 import kotlinx.coroutines.*
 
 class ChatFragment: Fragment(R.layout.fragment_chat) {

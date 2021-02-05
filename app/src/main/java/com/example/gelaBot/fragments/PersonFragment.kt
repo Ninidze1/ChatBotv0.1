@@ -1,4 +1,4 @@
-package com.example.autentification.fragments
+package com.example.gelaBot.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,10 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.autentification.MainActivity
-import com.example.autentification.PersonInfo
-import com.example.autentification.R
-import com.example.autentification.ResetActivity
+import com.example.gelaBot.MainActivity
+import com.example.gelaBot.PersonInfo
+import com.example.gelaBot.R
+import com.example.gelaBot.ResetActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

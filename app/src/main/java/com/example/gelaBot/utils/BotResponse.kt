@@ -1,7 +1,7 @@
-package com.example.autentification.utils
+package com.example.gelaBot.utils
 
-import com.example.autentification.utils.Constants.OPEN_GOOGLE
-import com.example.autentification.utils.Constants.OPEN_SEARCH
+import com.example.gelaBot.utils.Constants.OPEN_GOOGLE
+import com.example.gelaBot.utils.Constants.OPEN_SEARCH
 import java.sql.Date
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
